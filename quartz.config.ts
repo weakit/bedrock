@@ -18,7 +18,7 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: true,
+      cdnCaching: false,
       typography: {
         header: "Public Sans",
         body: "Public Sans",
@@ -67,7 +67,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
-      Plugin.CNAME()
+      Plugin.CNAME(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
